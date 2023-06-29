@@ -31,7 +31,8 @@ def train_step(model, xs, ys, optimizer, loss_func):
 def sample_seeds(total_seeds, count):
     seeds = set()
     while len(seeds) < count:
-        seeds.add(randint(0, total_seeds - 1))
+        #seeds.add(randint(0, total_seeds - 1))
+        seeds.add(27)
     return seeds
 
 
@@ -150,7 +151,8 @@ def main(args):
             name=args.wandb.name,
             resume=True,
         )
-
+    
+    os.environ["CUDA_VISIBLE_DEVICES"] = "1"
     model = build_model(args.model)
     model.cuda()
     model.train()

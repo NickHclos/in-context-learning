@@ -355,6 +355,8 @@ def read_run_dir(run_dir):
     all_runs = {}
     for task in os.listdir(run_dir):
         task_dir = os.path.join(run_dir, task)
+        # only test linear regression tasks
+        if task_dir != "../models/linear_regression" : continue
         for run_id in os.listdir(task_dir):
             run_path = os.path.join(task_dir, run_id)
             _, conf = get_model_from_run(run_path, only_conf=True)
@@ -386,6 +388,8 @@ def read_run_dir(run_dir):
                 all_runs[k].append(v)
 
     df = pd.DataFrame(all_runs).sort_values("run_name")
+    #print(df.run_name)
+    #print(f"{len(df)} {len(df.run_name.unique())}")
     assert len(df) == len(df.run_name.unique())
     return df
 

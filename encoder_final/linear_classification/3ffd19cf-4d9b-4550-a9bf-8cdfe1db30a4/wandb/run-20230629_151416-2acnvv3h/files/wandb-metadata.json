@@ -1,0 +1,27 @@
+{
+    "os": "Linux-5.4.0-149-generic-x86_64-with-glibc2.17",
+    "python": "3.8.12",
+    "heartbeatAt": "2023-06-29T19:14:18.244318",
+    "startedAt": "2023-06-29T19:14:16.986432",
+    "docker": null,
+    "gpu": "NVIDIA TITAN RTX",
+    "gpu_count": 2,
+    "cpu_count": 32,
+    "cuda": "11.0.207",
+    "args": [
+        "--config",
+        "conf/linear_classification.yaml"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "src_bai/train.py",
+    "git": {
+        "remote": "https://github.com/NickHclos/in-context-learning.git",
+        "commit": "5b7f517012e8be513b33ef84d013b658fb3d640a"
+    },
+    "email": null,
+    "root": "/data/jiachen/in-context-learning",
+    "host": "e900-rbtg",
+    "username": "jiachen",
+    "executable": "/data/jiachen/download/anaconda3/envs/icas/bin/python"
+}
